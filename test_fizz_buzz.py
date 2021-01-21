@@ -1,11 +1,12 @@
 import pytest
-
 from fizz_buzz import fizz_buzz_if_calc, fizz_buzz_using_boolean
+
 
 @pytest.fixture
 def expected_number_of_elements():
     """The fizzbuzz list will have 100 elements"""
     return 100
+
 
 @pytest.fixture
 def fizzbuzz_expected_answer():
@@ -16,6 +17,7 @@ def fizzbuzz_expected_answer():
 
 
 def test_fizz_buzz_if_calc_has_100_elements(expected_number_of_elements):
+    
     actual = fizz_buzz_if_calc()
 
     assert len(actual) == expected_number_of_elements
@@ -29,12 +31,14 @@ def test_fizz_buzz_using_boolean_has_100_elements(expected_number_of_elements):
 
 
 def test_fizz_buzz_if_calc_has_correct_items(fizzbuzz_expected_answer):
+    
     actual = fizz_buzz_if_calc()
 
     assert actual == fizzbuzz_expected_answer
 
 
 def test_fizz_buzz_using_boolean_has_correct_items(fizzbuzz_expected_answer):
+    
     actual = fizz_buzz_using_boolean()
 
     assert actual == fizzbuzz_expected_answer
